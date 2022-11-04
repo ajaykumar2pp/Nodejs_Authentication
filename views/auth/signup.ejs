@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/Style.css">
+    <title>My Placement</title>
+</head>
+
+<body>
+    <h1 class="text-center mt-3 text-primary ">Sign up</h1>
+    <div class="container-fluid ">
+
+        <div class="wrapper ">
+            <div class="row justify-content-center mt-2">
+                <!-- **********************  Left Area *********************************** -->
+                <div class="col-md-4  text-center">
+                    <img src="./images/Register_img.svg" class="ninja" alt="">
+                    <h1 class="ninja">My </h1>
+                    <h1 class="ninja">Placement</h1>
+                </div>
+                <!-- *****************************  right Area   ***************************** -->
+                <div class="col-md-4 ">
+                    <h1 class="text-center display-1 text-primary"><i class="bi bi-person-circle"></i></h1>
+                    <!-- ******************************************************************** -->
+                    <form action="/" method="POST">
+                        <% if(messages.error) { %>
+                            <span class="text-red text-center para">
+                                <%= messages.error %>
+                            </span>
+                            <% } %>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label font-bold ">Name</label>
+                                    <input name="username" value="<%= messages.username  %>" type="text"
+                                        class="form-control" id="username" placeholder="Enter your name">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label font-bold">Email</label>
+                                    <input name="email" value="<%= messages.email  %>" type="email" class="form-control"
+                                        id="useremail" placeholder="Enter your email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label font-bold">Password</label>
+                                    <input name="password" type="password" class="form-control" id="password"
+                                        placeholder="********************">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary ">Register</button>
+                                <a class="inline-block align-baseline font-bold text-sm float-end" href="/signin">
+                                    Already have an account?
+                                </a>
+
+
+
+                    </form>
+                    <hr>
+                    <div class="row mt-3">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <h3><i class="bi bi-google text-primary me-4 ms-5"></i></h3>
+                            <a class="inline-block align-baseline font-bold text-sm mt-2" href="/auth">
+                                Login with Google
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

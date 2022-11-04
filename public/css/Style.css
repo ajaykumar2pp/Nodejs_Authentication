@@ -1,0 +1,19 @@
+.ninja{
+    animation: rotates 1s linear infinite alternate;
+    color: rgba(207, 22, 28, 0.933);
+
+    }
+    @keyframes rotates {
+        from{
+            transform: translate(-0.9rem);
+        }
+        to{
+            transform: translate(0.9rem);
+        }
+        
+    }
+.para{
+    color: red;
+    text-align: center;
+    width: 100%;
+} 
